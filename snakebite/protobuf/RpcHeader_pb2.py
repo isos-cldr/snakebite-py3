@@ -8,7 +8,6 @@ from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
-from google.protobuf import descriptor_pb2
 # @@protoc_insertion_point(imports)
 
 _sym_db = _symbol_database.Default()
@@ -20,9 +19,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='RpcHeader.proto',
   package='hadoop.common',
   syntax='proto2',
-  serialized_pb=_b('\n\x0fRpcHeader.proto\x12\rhadoop.common\"\xa2\x02\n\x15RpcRequestHeaderProto\x12,\n\x07rpcKind\x18\x01 \x01(\x0e\x32\x1b.hadoop.common.RpcKindProto\x12\x42\n\x05rpcOp\x18\x02 \x01(\x0e\x32\x33.hadoop.common.RpcRequestHeaderProto.OperationProto\x12\x0e\n\x06\x63\x61llId\x18\x03 \x02(\x11\x12\x10\n\x08\x63lientId\x18\x04 \x02(\x0c\x12\x16\n\nretryCount\x18\x05 \x01(\x11:\x02-1\"]\n\x0eOperationProto\x12\x14\n\x10RPC_FINAL_PACKET\x10\x00\x12\x1b\n\x17RPC_CONTINUATION_PACKET\x10\x01\x12\x18\n\x14RPC_CLOSE_CONNECTION\x10\x02\"\xca\x05\n\x16RpcResponseHeaderProto\x12\x0e\n\x06\x63\x61llId\x18\x01 \x02(\r\x12\x44\n\x06status\x18\x02 \x02(\x0e\x32\x34.hadoop.common.RpcResponseHeaderProto.RpcStatusProto\x12\x1b\n\x13serverIpcVersionNum\x18\x03 \x01(\r\x12\x1a\n\x12\x65xceptionClassName\x18\x04 \x01(\t\x12\x10\n\x08\x65rrorMsg\x18\x05 \x01(\t\x12L\n\x0b\x65rrorDetail\x18\x06 \x01(\x0e\x32\x37.hadoop.common.RpcResponseHeaderProto.RpcErrorCodeProto\x12\x10\n\x08\x63lientId\x18\x07 \x01(\x0c\x12\x16\n\nretryCount\x18\x08 \x01(\x11:\x02-1\"3\n\x0eRpcStatusProto\x12\x0b\n\x07SUCCESS\x10\x00\x12\t\n\x05\x45RROR\x10\x01\x12\t\n\x05\x46\x41TAL\x10\x02\"\xe1\x02\n\x11RpcErrorCodeProto\x12\x15\n\x11\x45RROR_APPLICATION\x10\x01\x12\x18\n\x14\x45RROR_NO_SUCH_METHOD\x10\x02\x12\x1a\n\x16\x45RROR_NO_SUCH_PROTOCOL\x10\x03\x12\x14\n\x10\x45RROR_RPC_SERVER\x10\x04\x12\x1e\n\x1a\x45RROR_SERIALIZING_RESPONSE\x10\x05\x12\x1e\n\x1a\x45RROR_RPC_VERSION_MISMATCH\x10\x06\x12\x11\n\rFATAL_UNKNOWN\x10\n\x12#\n\x1f\x46\x41TAL_UNSUPPORTED_SERIALIZATION\x10\x0b\x12\x1c\n\x18\x46\x41TAL_INVALID_RPC_HEADER\x10\x0c\x12\x1f\n\x1b\x46\x41TAL_DESERIALIZING_REQUEST\x10\r\x12\x1a\n\x16\x46\x41TAL_VERSION_MISMATCH\x10\x0e\x12\x16\n\x12\x46\x41TAL_UNAUTHORIZED\x10\x0f\"\xdd\x02\n\x0cRpcSaslProto\x12\x0f\n\x07version\x18\x01 \x01(\r\x12\x34\n\x05state\x18\x02 \x02(\x0e\x32%.hadoop.common.RpcSaslProto.SaslState\x12\r\n\x05token\x18\x03 \x01(\x0c\x12\x33\n\x05\x61uths\x18\x04 \x03(\x0b\x32$.hadoop.common.RpcSaslProto.SaslAuth\x1a\x64\n\x08SaslAuth\x12\x0e\n\x06method\x18\x01 \x02(\t\x12\x11\n\tmechanism\x18\x02 \x02(\t\x12\x10\n\x08protocol\x18\x03 \x01(\t\x12\x10\n\x08serverId\x18\x04 \x01(\t\x12\x11\n\tchallenge\x18\x05 \x01(\x0c\"\\\n\tSaslState\x12\x0b\n\x07SUCCESS\x10\x00\x12\r\n\tNEGOTIATE\x10\x01\x12\x0c\n\x08INITIATE\x10\x02\x12\r\n\tCHALLENGE\x10\x03\x12\x0c\n\x08RESPONSE\x10\x04\x12\x08\n\x04WRAP\x10\x05*J\n\x0cRpcKindProto\x12\x0f\n\x0bRPC_BUILTIN\x10\x00\x12\x10\n\x0cRPC_WRITABLE\x10\x01\x12\x17\n\x13RPC_PROTOCOL_BUFFER\x10\x02\x42\x34\n\x1eorg.apache.hadoop.ipc.protobufB\x0fRpcHeaderProtos\xa0\x01\x01')
+  serialized_options=_b('\n\036org.apache.hadoop.ipc.protobufB\017RpcHeaderProtos\240\001\001'),
+  serialized_pb=_b('\n\x0fRpcHeader.proto\x12\rhadoop.common\"K\n\x11RPCTraceInfoProto\x12\x0f\n\x07traceId\x18\x01 \x01(\x03\x12\x10\n\x08parentId\x18\x02 \x01(\x03\x12\x13\n\x0bspanContext\x18\x03 \x01(\x0c\";\n\x15RPCCallerContextProto\x12\x0f\n\x07\x63ontext\x18\x01 \x02(\t\x12\x11\n\tsignature\x18\x02 \x01(\x0c\"\xc3\x03\n\x15RpcRequestHeaderProto\x12,\n\x07rpcKind\x18\x01 \x01(\x0e\x32\x1b.hadoop.common.RpcKindProto\x12\x42\n\x05rpcOp\x18\x02 \x01(\x0e\x32\x33.hadoop.common.RpcRequestHeaderProto.OperationProto\x12\x0e\n\x06\x63\x61llId\x18\x03 \x02(\x11\x12\x10\n\x08\x63lientId\x18\x04 \x02(\x0c\x12\x16\n\nretryCount\x18\x05 \x01(\x11:\x02-1\x12\x33\n\ttraceInfo\x18\x06 \x01(\x0b\x32 .hadoop.common.RPCTraceInfoProto\x12;\n\rcallerContext\x18\x07 \x01(\x0b\x32$.hadoop.common.RPCCallerContextProto\x12\x0f\n\x07stateId\x18\x08 \x01(\x03\x12\x1c\n\x14routerFederatedState\x18\t \x01(\x0c\"]\n\x0eOperationProto\x12\x14\n\x10RPC_FINAL_PACKET\x10\x00\x12\x1b\n\x17RPC_CONTINUATION_PACKET\x10\x01\x12\x18\n\x14RPC_CLOSE_CONNECTION\x10\x02\"\xf9\x05\n\x16RpcResponseHeaderProto\x12\x0e\n\x06\x63\x61llId\x18\x01 \x02(\r\x12\x44\n\x06status\x18\x02 \x02(\x0e\x32\x34.hadoop.common.RpcResponseHeaderProto.RpcStatusProto\x12\x1b\n\x13serverIpcVersionNum\x18\x03 \x01(\r\x12\x1a\n\x12\x65xceptionClassName\x18\x04 \x01(\t\x12\x10\n\x08\x65rrorMsg\x18\x05 \x01(\t\x12L\n\x0b\x65rrorDetail\x18\x06 \x01(\x0e\x32\x37.hadoop.common.RpcResponseHeaderProto.RpcErrorCodeProto\x12\x10\n\x08\x63lientId\x18\x07 \x01(\x0c\x12\x16\n\nretryCount\x18\x08 \x01(\x11:\x02-1\x12\x0f\n\x07stateId\x18\t \x01(\x03\x12\x1c\n\x14routerFederatedState\x18\n \x01(\x0c\"3\n\x0eRpcStatusProto\x12\x0b\n\x07SUCCESS\x10\x00\x12\t\n\x05\x45RROR\x10\x01\x12\t\n\x05\x46\x41TAL\x10\x02\"\xe1\x02\n\x11RpcErrorCodeProto\x12\x15\n\x11\x45RROR_APPLICATION\x10\x01\x12\x18\n\x14\x45RROR_NO_SUCH_METHOD\x10\x02\x12\x1a\n\x16\x45RROR_NO_SUCH_PROTOCOL\x10\x03\x12\x14\n\x10\x45RROR_RPC_SERVER\x10\x04\x12\x1e\n\x1a\x45RROR_SERIALIZING_RESPONSE\x10\x05\x12\x1e\n\x1a\x45RROR_RPC_VERSION_MISMATCH\x10\x06\x12\x11\n\rFATAL_UNKNOWN\x10\n\x12#\n\x1f\x46\x41TAL_UNSUPPORTED_SERIALIZATION\x10\x0b\x12\x1c\n\x18\x46\x41TAL_INVALID_RPC_HEADER\x10\x0c\x12\x1f\n\x1b\x46\x41TAL_DESERIALIZING_REQUEST\x10\r\x12\x1a\n\x16\x46\x41TAL_VERSION_MISMATCH\x10\x0e\x12\x16\n\x12\x46\x41TAL_UNAUTHORIZED\x10\x0f\"\xdd\x02\n\x0cRpcSaslProto\x12\x0f\n\x07version\x18\x01 \x01(\r\x12\x34\n\x05state\x18\x02 \x02(\x0e\x32%.hadoop.common.RpcSaslProto.SaslState\x12\r\n\x05token\x18\x03 \x01(\x0c\x12\x33\n\x05\x61uths\x18\x04 \x03(\x0b\x32$.hadoop.common.RpcSaslProto.SaslAuth\x1a\x64\n\x08SaslAuth\x12\x0e\n\x06method\x18\x01 \x02(\t\x12\x11\n\tmechanism\x18\x02 \x02(\t\x12\x10\n\x08protocol\x18\x03 \x01(\t\x12\x10\n\x08serverId\x18\x04 \x01(\t\x12\x11\n\tchallenge\x18\x05 \x01(\x0c\"\\\n\tSaslState\x12\x0b\n\x07SUCCESS\x10\x00\x12\r\n\tNEGOTIATE\x10\x01\x12\x0c\n\x08INITIATE\x10\x02\x12\r\n\tCHALLENGE\x10\x03\x12\x0c\n\x08RESPONSE\x10\x04\x12\x08\n\x04WRAP\x10\x05*J\n\x0cRpcKindProto\x12\x0f\n\x0bRPC_BUILTIN\x10\x00\x12\x10\n\x0cRPC_WRITABLE\x10\x01\x12\x17\n\x13RPC_PROTOCOL_BUFFER\x10\x02\x42\x34\n\x1eorg.apache.hadoop.ipc.protobufB\x0fRpcHeaderProtos\xa0\x01\x01')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _RPCKINDPROTO = _descriptor.EnumDescriptor(
   name='RpcKindProto',
@@ -32,21 +31,21 @@ _RPCKINDPROTO = _descriptor.EnumDescriptor(
   values=[
     _descriptor.EnumValueDescriptor(
       name='RPC_BUILTIN', index=0, number=0,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='RPC_WRITABLE', index=1, number=1,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='RPC_PROTOCOL_BUFFER', index=2, number=2,
-      options=None,
+      serialized_options=None,
       type=None),
   ],
   containing_type=None,
-  options=None,
-  serialized_start=1396,
-  serialized_end=1470,
+  serialized_options=None,
+  serialized_start=1742,
+  serialized_end=1816,
 )
 _sym_db.RegisterEnumDescriptor(_RPCKINDPROTO)
 
@@ -64,21 +63,21 @@ _RPCREQUESTHEADERPROTO_OPERATIONPROTO = _descriptor.EnumDescriptor(
   values=[
     _descriptor.EnumValueDescriptor(
       name='RPC_FINAL_PACKET', index=0, number=0,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='RPC_CONTINUATION_PACKET', index=1, number=1,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='RPC_CLOSE_CONNECTION', index=2, number=2,
-      options=None,
+      serialized_options=None,
       type=None),
   ],
   containing_type=None,
-  options=None,
-  serialized_start=232,
-  serialized_end=325,
+  serialized_options=None,
+  serialized_start=531,
+  serialized_end=624,
 )
 _sym_db.RegisterEnumDescriptor(_RPCREQUESTHEADERPROTO_OPERATIONPROTO)
 
@@ -90,21 +89,21 @@ _RPCRESPONSEHEADERPROTO_RPCSTATUSPROTO = _descriptor.EnumDescriptor(
   values=[
     _descriptor.EnumValueDescriptor(
       name='SUCCESS', index=0, number=0,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='ERROR', index=1, number=1,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='FATAL', index=2, number=2,
-      options=None,
+      serialized_options=None,
       type=None),
   ],
   containing_type=None,
-  options=None,
-  serialized_start=635,
-  serialized_end=686,
+  serialized_options=None,
+  serialized_start=981,
+  serialized_end=1032,
 )
 _sym_db.RegisterEnumDescriptor(_RPCRESPONSEHEADERPROTO_RPCSTATUSPROTO)
 
@@ -116,57 +115,57 @@ _RPCRESPONSEHEADERPROTO_RPCERRORCODEPROTO = _descriptor.EnumDescriptor(
   values=[
     _descriptor.EnumValueDescriptor(
       name='ERROR_APPLICATION', index=0, number=1,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='ERROR_NO_SUCH_METHOD', index=1, number=2,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='ERROR_NO_SUCH_PROTOCOL', index=2, number=3,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='ERROR_RPC_SERVER', index=3, number=4,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='ERROR_SERIALIZING_RESPONSE', index=4, number=5,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='ERROR_RPC_VERSION_MISMATCH', index=5, number=6,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='FATAL_UNKNOWN', index=6, number=10,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='FATAL_UNSUPPORTED_SERIALIZATION', index=7, number=11,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='FATAL_INVALID_RPC_HEADER', index=8, number=12,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='FATAL_DESERIALIZING_REQUEST', index=9, number=13,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='FATAL_VERSION_MISMATCH', index=10, number=14,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='FATAL_UNAUTHORIZED', index=11, number=15,
-      options=None,
+      serialized_options=None,
       type=None),
   ],
   containing_type=None,
-  options=None,
-  serialized_start=689,
-  serialized_end=1042,
+  serialized_options=None,
+  serialized_start=1035,
+  serialized_end=1388,
 )
 _sym_db.RegisterEnumDescriptor(_RPCRESPONSEHEADERPROTO_RPCERRORCODEPROTO)
 
@@ -178,35 +177,118 @@ _RPCSASLPROTO_SASLSTATE = _descriptor.EnumDescriptor(
   values=[
     _descriptor.EnumValueDescriptor(
       name='SUCCESS', index=0, number=0,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='NEGOTIATE', index=1, number=1,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='INITIATE', index=2, number=2,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='CHALLENGE', index=3, number=3,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='RESPONSE', index=4, number=4,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='WRAP', index=5, number=5,
-      options=None,
+      serialized_options=None,
       type=None),
   ],
   containing_type=None,
-  options=None,
-  serialized_start=1302,
-  serialized_end=1394,
+  serialized_options=None,
+  serialized_start=1648,
+  serialized_end=1740,
 )
 _sym_db.RegisterEnumDescriptor(_RPCSASLPROTO_SASLSTATE)
+
+
+_RPCTRACEINFOPROTO = _descriptor.Descriptor(
+  name='RPCTraceInfoProto',
+  full_name='hadoop.common.RPCTraceInfoProto',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='traceId', full_name='hadoop.common.RPCTraceInfoProto.traceId', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='parentId', full_name='hadoop.common.RPCTraceInfoProto.parentId', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='spanContext', full_name='hadoop.common.RPCTraceInfoProto.spanContext', index=2,
+      number=3, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=34,
+  serialized_end=109,
+)
+
+
+_RPCCALLERCONTEXTPROTO = _descriptor.Descriptor(
+  name='RPCCallerContextProto',
+  full_name='hadoop.common.RPCCallerContextProto',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='context', full_name='hadoop.common.RPCCallerContextProto.context', index=0,
+      number=1, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='signature', full_name='hadoop.common.RPCCallerContextProto.signature', index=1,
+      number=2, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=111,
+  serialized_end=170,
+)
 
 
 _RPCREQUESTHEADERPROTO = _descriptor.Descriptor(
@@ -222,35 +304,63 @@ _RPCREQUESTHEADERPROTO = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='rpcOp', full_name='hadoop.common.RpcRequestHeaderProto.rpcOp', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='callId', full_name='hadoop.common.RpcRequestHeaderProto.callId', index=2,
       number=3, type=17, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='clientId', full_name='hadoop.common.RpcRequestHeaderProto.clientId', index=3,
       number=4, type=12, cpp_type=9, label=2,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='retryCount', full_name='hadoop.common.RpcRequestHeaderProto.retryCount', index=4,
       number=5, type=17, cpp_type=1, label=1,
       has_default_value=True, default_value=-1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='traceInfo', full_name='hadoop.common.RpcRequestHeaderProto.traceInfo', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='callerContext', full_name='hadoop.common.RpcRequestHeaderProto.callerContext', index=6,
+      number=7, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='stateId', full_name='hadoop.common.RpcRequestHeaderProto.stateId', index=7,
+      number=8, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='routerFederatedState', full_name='hadoop.common.RpcRequestHeaderProto.routerFederatedState', index=8,
+      number=9, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -258,14 +368,14 @@ _RPCREQUESTHEADERPROTO = _descriptor.Descriptor(
   enum_types=[
     _RPCREQUESTHEADERPROTO_OPERATIONPROTO,
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=35,
-  serialized_end=325,
+  serialized_start=173,
+  serialized_end=624,
 )
 
 
@@ -282,56 +392,70 @@ _RPCRESPONSEHEADERPROTO = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='status', full_name='hadoop.common.RpcResponseHeaderProto.status', index=1,
       number=2, type=14, cpp_type=8, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='serverIpcVersionNum', full_name='hadoop.common.RpcResponseHeaderProto.serverIpcVersionNum', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='exceptionClassName', full_name='hadoop.common.RpcResponseHeaderProto.exceptionClassName', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='errorMsg', full_name='hadoop.common.RpcResponseHeaderProto.errorMsg', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='errorDetail', full_name='hadoop.common.RpcResponseHeaderProto.errorDetail', index=5,
       number=6, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='clientId', full_name='hadoop.common.RpcResponseHeaderProto.clientId', index=6,
       number=7, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='retryCount', full_name='hadoop.common.RpcResponseHeaderProto.retryCount', index=7,
       number=8, type=17, cpp_type=1, label=1,
       has_default_value=True, default_value=-1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='stateId', full_name='hadoop.common.RpcResponseHeaderProto.stateId', index=8,
+      number=9, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='routerFederatedState', full_name='hadoop.common.RpcResponseHeaderProto.routerFederatedState', index=9,
+      number=10, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -340,14 +464,14 @@ _RPCRESPONSEHEADERPROTO = _descriptor.Descriptor(
     _RPCRESPONSEHEADERPROTO_RPCSTATUSPROTO,
     _RPCRESPONSEHEADERPROTO_RPCERRORCODEPROTO,
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=328,
-  serialized_end=1042,
+  serialized_start=627,
+  serialized_end=1388,
 )
 
 
@@ -364,49 +488,49 @@ _RPCSASLPROTO_SASLAUTH = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='mechanism', full_name='hadoop.common.RpcSaslProto.SaslAuth.mechanism', index=1,
       number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='protocol', full_name='hadoop.common.RpcSaslProto.SaslAuth.protocol', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='serverId', full_name='hadoop.common.RpcSaslProto.SaslAuth.serverId', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='challenge', full_name='hadoop.common.RpcSaslProto.SaslAuth.challenge', index=4,
       number=5, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1200,
-  serialized_end=1300,
+  serialized_start=1546,
+  serialized_end=1646,
 )
 
 _RPCSASLPROTO = _descriptor.Descriptor(
@@ -422,28 +546,28 @@ _RPCSASLPROTO = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='state', full_name='hadoop.common.RpcSaslProto.state', index=1,
       number=2, type=14, cpp_type=8, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='token', full_name='hadoop.common.RpcSaslProto.token', index=2,
       number=3, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='auths', full_name='hadoop.common.RpcSaslProto.auths', index=3,
       number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -451,18 +575,20 @@ _RPCSASLPROTO = _descriptor.Descriptor(
   enum_types=[
     _RPCSASLPROTO_SASLSTATE,
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1045,
-  serialized_end=1394,
+  serialized_start=1391,
+  serialized_end=1740,
 )
 
 _RPCREQUESTHEADERPROTO.fields_by_name['rpcKind'].enum_type = _RPCKINDPROTO
 _RPCREQUESTHEADERPROTO.fields_by_name['rpcOp'].enum_type = _RPCREQUESTHEADERPROTO_OPERATIONPROTO
+_RPCREQUESTHEADERPROTO.fields_by_name['traceInfo'].message_type = _RPCTRACEINFOPROTO
+_RPCREQUESTHEADERPROTO.fields_by_name['callerContext'].message_type = _RPCCALLERCONTEXTPROTO
 _RPCREQUESTHEADERPROTO_OPERATIONPROTO.containing_type = _RPCREQUESTHEADERPROTO
 _RPCRESPONSEHEADERPROTO.fields_by_name['status'].enum_type = _RPCRESPONSEHEADERPROTO_RPCSTATUSPROTO
 _RPCRESPONSEHEADERPROTO.fields_by_name['errorDetail'].enum_type = _RPCRESPONSEHEADERPROTO_RPCERRORCODEPROTO
@@ -472,10 +598,27 @@ _RPCSASLPROTO_SASLAUTH.containing_type = _RPCSASLPROTO
 _RPCSASLPROTO.fields_by_name['state'].enum_type = _RPCSASLPROTO_SASLSTATE
 _RPCSASLPROTO.fields_by_name['auths'].message_type = _RPCSASLPROTO_SASLAUTH
 _RPCSASLPROTO_SASLSTATE.containing_type = _RPCSASLPROTO
+DESCRIPTOR.message_types_by_name['RPCTraceInfoProto'] = _RPCTRACEINFOPROTO
+DESCRIPTOR.message_types_by_name['RPCCallerContextProto'] = _RPCCALLERCONTEXTPROTO
 DESCRIPTOR.message_types_by_name['RpcRequestHeaderProto'] = _RPCREQUESTHEADERPROTO
 DESCRIPTOR.message_types_by_name['RpcResponseHeaderProto'] = _RPCRESPONSEHEADERPROTO
 DESCRIPTOR.message_types_by_name['RpcSaslProto'] = _RPCSASLPROTO
 DESCRIPTOR.enum_types_by_name['RpcKindProto'] = _RPCKINDPROTO
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
+
+RPCTraceInfoProto = _reflection.GeneratedProtocolMessageType('RPCTraceInfoProto', (_message.Message,), dict(
+  DESCRIPTOR = _RPCTRACEINFOPROTO,
+  __module__ = 'RpcHeader_pb2'
+  # @@protoc_insertion_point(class_scope:hadoop.common.RPCTraceInfoProto)
+  ))
+_sym_db.RegisterMessage(RPCTraceInfoProto)
+
+RPCCallerContextProto = _reflection.GeneratedProtocolMessageType('RPCCallerContextProto', (_message.Message,), dict(
+  DESCRIPTOR = _RPCCALLERCONTEXTPROTO,
+  __module__ = 'RpcHeader_pb2'
+  # @@protoc_insertion_point(class_scope:hadoop.common.RPCCallerContextProto)
+  ))
+_sym_db.RegisterMessage(RPCCallerContextProto)
 
 RpcRequestHeaderProto = _reflection.GeneratedProtocolMessageType('RpcRequestHeaderProto', (_message.Message,), dict(
   DESCRIPTOR = _RPCREQUESTHEADERPROTO,
@@ -507,6 +650,5 @@ _sym_db.RegisterMessage(RpcSaslProto)
 _sym_db.RegisterMessage(RpcSaslProto.SaslAuth)
 
 
-DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\036org.apache.hadoop.ipc.protobufB\017RpcHeaderProtos\240\001\001'))
+DESCRIPTOR._options = None
 # @@protoc_insertion_point(module_scope)
