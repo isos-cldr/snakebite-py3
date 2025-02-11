@@ -7,6 +7,7 @@ from google.protobuf.internal import enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
+from google.protobuf import service_reflection
 from google.protobuf import symbol_database as _symbol_database
 # @@protoc_insertion_point(imports)
 
@@ -8928,5 +8929,15 @@ _CLIENTNAMENODEPROTOCOL = _descriptor.ServiceDescriptor(
 _sym_db.RegisterServiceDescriptor(_CLIENTNAMENODEPROTOCOL)
 
 DESCRIPTOR.services_by_name['ClientNamenodeProtocol'] = _CLIENTNAMENODEPROTOCOL
+
+ClientNamenodeProtocol = service_reflection.GeneratedServiceType('ClientNamenodeProtocol', (_service.Service,), dict(
+  DESCRIPTOR = _CLIENTNAMENODEPROTOCOL,
+  __module__ = 'ClientNamenodeProtocol_pb2'
+))
+
+ClientNamenodeProtocol_Stub = service_reflection.GeneratedServiceStubType('ClientNamenodeProtocol_Stub', (ClientNamenodeProtocol,), dict(
+  DESCRIPTOR = _CLIENTNAMENODEPROTOCOL,
+  __module__ = 'ClientNamenodeProtocol_pb2'
+))
 
 # @@protoc_insertion_point(module_scope)
