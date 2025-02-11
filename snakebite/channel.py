@@ -52,7 +52,7 @@ from google.protobuf.service import RpcChannel
 # Protobuf imports
 from snakebite.protobuf.RpcHeader_pb2 import RpcRequestHeaderProto, RpcResponseHeaderProto
 from snakebite.protobuf.IpcConnectionContext_pb2 import IpcConnectionContextProto
-from snakebite.protobuf.ProtobufRpcEngine_pb2 import RequestHeaderProto
+from snakebite.protobuf.ProtobufRpcEngine2_pb2 import RequestHeaderProto
 from snakebite.protobuf.datatransfer_pb2 import OpReadBlockProto, BlockOpResponseProto, PacketHeaderProto, ClientReadStatusProto
 
 from snakebite.platformutils import get_current_username
