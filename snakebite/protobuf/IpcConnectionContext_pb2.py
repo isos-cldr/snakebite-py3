@@ -7,7 +7,6 @@ from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
-from google.protobuf import descriptor_pb2
 # @@protoc_insertion_point(imports)
 
 _sym_db = _symbol_database.Default()
@@ -19,9 +18,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='IpcConnectionContext.proto',
   package='hadoop.common',
   syntax='proto2',
+  serialized_options=_b('\n\036org.apache.hadoop.ipc.protobufB\032IpcConnectionContextProtos\240\001\001'),
   serialized_pb=_b('\n\x1aIpcConnectionContext.proto\x12\rhadoop.common\"?\n\x14UserInformationProto\x12\x15\n\reffectiveUser\x18\x01 \x01(\t\x12\x10\n\x08realUser\x18\x02 \x01(\t\"d\n\x19IpcConnectionContextProto\x12\x35\n\x08userInfo\x18\x02 \x01(\x0b\x32#.hadoop.common.UserInformationProto\x12\x10\n\x08protocol\x18\x03 \x01(\tB?\n\x1eorg.apache.hadoop.ipc.protobufB\x1aIpcConnectionContextProtos\xa0\x01\x01')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -39,21 +38,21 @@ _USERINFORMATIONPROTO = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='realUser', full_name='hadoop.common.UserInformationProto.realUser', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -77,21 +76,21 @@ _IPCCONNECTIONCONTEXTPROTO = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='protocol', full_name='hadoop.common.IpcConnectionContextProto.protocol', index=1,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -104,6 +103,7 @@ _IPCCONNECTIONCONTEXTPROTO = _descriptor.Descriptor(
 _IPCCONNECTIONCONTEXTPROTO.fields_by_name['userInfo'].message_type = _USERINFORMATIONPROTO
 DESCRIPTOR.message_types_by_name['UserInformationProto'] = _USERINFORMATIONPROTO
 DESCRIPTOR.message_types_by_name['IpcConnectionContextProto'] = _IPCCONNECTIONCONTEXTPROTO
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 UserInformationProto = _reflection.GeneratedProtocolMessageType('UserInformationProto', (_message.Message,), dict(
   DESCRIPTOR = _USERINFORMATIONPROTO,
@@ -120,6 +120,5 @@ IpcConnectionContextProto = _reflection.GeneratedProtocolMessageType('IpcConnect
 _sym_db.RegisterMessage(IpcConnectionContextProto)
 
 
-DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\036org.apache.hadoop.ipc.protobufB\032IpcConnectionContextProtos\240\001\001'))
+DESCRIPTOR._options = None
 # @@protoc_insertion_point(module_scope)
